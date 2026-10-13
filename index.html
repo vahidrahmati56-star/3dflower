@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گل‌فروشی سه‌بعدی | دانشنامه گل‌ها</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101713;color:#f6f3e9;font-family:Tahoma,Arial,sans-serif}
+header{padding:20px;background:#19251e;border-bottom:1px solid #405044}
+header h1{font-size:23px;margin:0 0 8px;color:#e4c994}
+header p{margin:0;color:#c2cbbf;font-size:13px}
+main{max-width:1100px;margin:auto;padding:16px}
+.shop{height:220px;border-radius:16px;background:linear-gradient(140deg,#31483a,#17241c 65%,#705b43);padding:22px;display:flex;flex-direction:column;justify-content:end;position:relative;overflow:hidden}
+.shop:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#ffffff08);pointer-events:none}
+.shop h2{font-size:23px;margin:0 0 8px;position:relative}
+.shop p{margin:0;color:#d9dfd3;position:relative;font-size:14px}
+.layout{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+.panel{background:#1b241e;border:1px solid #344238;border-radius:16px;overflow:hidden}
+.panel h3{padding:0 16px;margin:16px 0 8px}
+.viewer{height:350px;background:radial-gradient(ellipse,#354a3b,#111a14 72%);position:relative}
+model-viewer{width:100%;height:100%;--poster-color:transparent}
+.note{font-size:12px;color:#aeb9ae;padding:0 16px 14px}
+.info{padding:16px}
+.info h2{color:#e5c997;margin:0 0 8px}
+.info p{line-height:2;color:#d3dbd1;font-size:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:#2c3b30;padding:8px 11px;border-radius:20px;font-size:12px;color:#e3d4ae}
+button{border:0;background:#d8bd88;color:#172018;padding:12px 16px;border-radius:10px;font-weight:bold;font-size:14px}
+footer{text-align:center;color:#99a69a;padding:24px;font-size:12px}
+@media(min-width:720px){.layout{grid-template-columns:1.15fr .85fr}.viewer{height:480px}.shop{height:270px}}
+</style>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+<header>
+<h1>🌿 گل‌فروشی بوتانیک</h1>
+<p>یک تجربهٔ سه‌بعدی برای کشف دنیای گل‌ها</p>
+</header>
+<main>
+<section class="shop">
+<h2>به باغ گل ما خوش آمدی</h2>
+<p>گل مورد علاقه‌ات را از نزدیک ببین و دربارهٔ آن بیشتر بدان.</p>
+</section>
+<div class="layout">
+<section class="panel">
+<h3>رز سه‌بعدی</h3>
+<div class="viewer">
+<model-viewer
+src="./rose.glb"
+alt="مدل سه‌بعدی گل رز"
+camera-controls
+auto-rotate
+rotation-per-second="15deg"
+shadow-intensity="1"
+exposure="1"
+loading="eager"
+>
+</model-viewer>
+</div>
+<div class="note">با لمس و کشیدن انگشت، گل را بچرخان و با دو انگشت بزرگ‌نمایی کن.</div>
+</section>
+<section class="panel">
+<div class="info">
+<h2>🌹 رز | Rose</h2>
+<div class="tags">
+<span class="tag">گیاه گل‌دار</span>
+<span class="tag">گیاه زینتی</span>
+<span class="tag">خانواده Rosaceae</span>
+</div>
+<p>رزها گروه متنوعی از گیاهان گل‌دار هستند که به‌خاطر شکل گل، تنوع رنگ و عطرشان پرورش داده می‌شوند.</p>
+<h3>راهنمای نگهداری</h3>
+<p>☀️ نور: بسته به گونه، معمولاً نور کافی و آفتاب مستقیم ملایم تا زیاد.</p>
+<p>💧 آبیاری: بر اساس رطوبت خاک و نیاز گونه؛ از ماندن طولانی‌مدت آب در گلدان پرهیز کن.</p>
+<h3>دربارهٔ این مدل</h3>
+<p>این مدل برای نمایش تعاملی انتخاب شده است. اطلاعات نگهداری بالا کلی هستند و ممکن است با نوع دقیق رز تفاوت داشته باشند.</p>
+<button onclick="document.querySelector('model-viewer').cameraOrbit='0deg 75deg 2m';document.querySelector('model-viewer').fieldOfView='30deg'">نمای نزدیک گل</button>
+</div>
+</section>
+</div>
+</main>
+<footer>گل‌فروشی سه‌بعدی • نسخهٔ آزمایشی</footer>
+</body>
+</html>
